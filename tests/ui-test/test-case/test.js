@@ -11,7 +11,7 @@ fixture `FLIP - Chapter UI Test Automation`
     //go to base url
     .page`${process.env.VERCEL_URL}`
 
-test('Should Success Checkout Product as Guest', async t => {
+test('Should Passed Checkout Product as Guest', async t => {
     
     await t
         //expected masuk ke home page
@@ -55,7 +55,7 @@ test('Should Success Checkout Product as Guest', async t => {
     await helper.checkOutOrder(listItemData, true);
 })
 
-test('Should Success Checkout Product as Registered User', async t => {
+test('Should Passed Checkout Product as Registered User', async t => {
     
     await t
         //expected masuk ke home page
@@ -104,4 +104,23 @@ test('Should Success Checkout Product as Registered User', async t => {
         .click(Page.checkoutButton)
 
     await helper.checkOutOrder(listItemData, false);
+})
+
+test('Should Passed Sort Product Price', async t => {
+    
+    await t
+        //expected masuk ke home page
+        .expect(Page.searchButton.exists).ok('expected masuk ke home page')
+        //click product light weight jacket
+        .click(Selector('a').withText('Shop All'))
+        
+        //get current url
+        const getUrl = ClientFunction(() => window.location.href);
+        let currentUrl = await getUrl.with({ boundTestRun: t })();
+    
+    await t
+        //expect masuk ke page shop all
+        .expect(currentUrl).contains('shop-all')
+        //expect setidaknya ada 1 product yang tampil
+        .expect(Page.productElement.exists).ok('expect setidaknya ada 1 product yang tampil')
 })
