@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const helper = new uiHelper();
 
-fixture `FLIP - Chapter UI Test Automation`
+fixture `UI Test Automation`
     //go to base url
     .page`${process.env.VERCEL_URL}`
 

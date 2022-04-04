@@ -1,5 +1,5 @@
 {
-  "name": "test-flip",
+  "name": "test-automation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fajartabuti/test-flip.git"
+    "url": "git+https://github.com/fajartabuti/test-automation.git"
   },
   "author": "Fajar Tri Saputra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fajartabuti/test-flip/issues"
+    "url": "https://github.com/fajartabuti/test-automation/issues"
   },
-  "homepage": "https://github.com/fajartabuti/test-flip#readme",
+  "homepage": "https://github.com/fajartabuti/test-automation#readme",
   "devDependencies": {
     "allure-commandline": "^2.17.2",
     "chai": "^4.3.6",

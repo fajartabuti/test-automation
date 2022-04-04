@@ -5,7 +5,7 @@ const api = require('../endpoint/list');
 
 require('dotenv').config();
 
-describe('FLIP - Chapter API Test Automation', () => {
+describe('API Test Automation', () => {
   let token = process.env.API_TOKEN;
 
   it('Should Passed Get Todos Data by Title and Status', async () => {
