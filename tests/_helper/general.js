@@ -1,7 +1,7 @@
 let fn = {};
 
 fn.removeCurrency = (text) => {
-    text = text.replace(/\$/gi, '').replace(' USD', '');
+    text = text.replace('.', '').replace('Rp', '');
 
     return text;
 };
